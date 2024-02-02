@@ -8,6 +8,46 @@ The raw data sources used were:
 * Sentinel-1 C-band VV/VH backscatter intensity rasters over an agricultural site spanning 3 months
 * Point vector data with 10 crop labels randomly distributed over the site's farmland
 
+## Packages
+
+The key Python packages used in this project are:
+
+**Data Manipulation and Analysis**:
+- pandas 
+- numpy
+- xarray
+- rioxarray (GeoPandas)
+
+**Machine Learning**:
+- scikit-learn
+- TensorFlow/Keras
+
+**Model Evaluation**:
+- matplotlib
+- seaborn
+
+**Geospatial Data Handling**:  
+- planetary_computer 
+- rasterio
+
+**Preprocessing**:
+- MinMaxScaler
+- StandardScaler 
+
+**Model Training**:
+- LogisticRegression
+- RandomForestClassifier
+- RandomizedSearchCV (hyperparameter tuning)
+
+**Miscellaneous Utils**:
+- warnings
+- time
+- itertools
+
+The core modeling pipeline relies on Scikit-Learn and Pandas for manipulation and preprocessing of array data, along with geospatial packages like rioxarray to handle satellite raster time series. The deep learning components leverage TensorFlow/Keras. 
+
+Hyperparameter tuning was done using RandomizedSearch from Scikit-Learn to find optimal model configurations for the random forest. Evaluation was based on accuracy metrics.
+
 ### Data Wrangling
 
 1. **Spatial Join**: A spatial join between the crop labels and radar data extracted average VV/VH values for each farm's time series. 
@@ -41,3 +81,13 @@ The high performance of the RF+RVI approach can be attributed to:
 Given the significant jump in accuracy on external industry data, the RF+RVI approach shows good generalization ability even with limited training samples. This model has been saved for real-world crop type mapping applications.
 
 Future iterations could incorporate recent hyperparameter optimization techniques such as Bayesian hyperband to further improve predictive power.
+
+## Status 
+Project is: complete
+
+## Contact 
+* zxu4@case.edu
+* ktn37@case.edu
+
+## Acknowledgements 
+* Data was taken from EY Challenge 2023 and Microsoft Planetary Hub 
