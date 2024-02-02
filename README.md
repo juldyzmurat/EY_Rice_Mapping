@@ -24,8 +24,6 @@ Varying ML approaches were tested:
 
 Hyperparameter tuning and cross validation were utilized.
 
-Here is an updated Results section highlighting that the random forest model on RVI performed best on the EY test set:
-
 ## Results  
 
 Multiple models were evaluated based on accuracy on a held-out EY test set consisting of Sentinel-1 SAR data over unknown crop types.
